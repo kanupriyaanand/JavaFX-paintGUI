@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.paintgui.HelloController">
+   <children>
+      <VBox prefHeight="32.0" prefWidth="600.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <MenuBar>
+                     <Menu text="File">
+                        <MenuItem onAction="#onSave" text="Save" />
+
+                     </Menu>
+
+                  </MenuBar>
+                  <TextField fx:id="bsize" />
+                  <Button mnemonicParsing="false" onAction="#toolselected" text="Brush">
+                     <cursor>
+                        <Cursor fx:constant="CROSSHAIR" />
+                     </cursor></Button>
+                  <ColorPicker fx:id="colorpicker" promptText="colour" />
+               </children></HBox>
+            <Canvas fx:id="canvas" height="323.0" width="600.0" />
+         </children>
+      </VBox>
+   </children>
+</Pane>
